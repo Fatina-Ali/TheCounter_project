@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> COUNTER PROJECT</title>
+
+    <meta charset="UTF-8"/>
+
+</head>
+<body>
+    <div id="div">
+        <h1 id="index"> COUNTER </h1>
+        <p > <hr id="hr"> </p>
+        <h2 id="counter">0</h2>
+        <button id="button1"> LOWER COUNT</button>
+
+        <button id="button2">ADD COUNT</button>
+    </div>
+
+
+
+</body>
+<style>
+    body{
+        background-color:rgba(135, 151, 155, 0.404)
+        
+    }
+    #div{
+        width: 450px;
+        height: 600px;
+        background-color:rgb(218, 119, 183);
+        border-width: 6px;
+        border-color:black ;
+        border-style:double;
+        margin: auto;
+    }
+    #index{
+        text-align: center;
+        color:black;
+        font-size: 60px;
+
+    }
+    #counter{
+        text-align: center;
+        color:rgb(100, 32, 165);
+        font-size: 100px;}
+
+    #button1{
+        display: block;
+        margin: auto;
+        background-color:lightsteelblue;
+        margin-bottom:20px ;}
+
+    #button2{
+        display: block;
+        margin: auto;
+        background-color:lightsteelblue; }
+
+</style>
+
+<script>
+    
+    let number=document.getElementById("counter");
+    let btn=document.getElementById("button1");
+    btn.onclick=function(){
+        let num = number.textContent;
+        if (num>0){
+            new_num = Number(num) - 1;
+            number.textContent = new_num;};
+        };
+
+    let bt=document.getElementById("button2");
+    bt.onclick=function(){
+        let num = number.textContent;
+        new_num = Number(num) + 1;
+        number.textContent = new_num; 
+    };
+
+</script>
+
+
+</html>
